@@ -6,19 +6,16 @@
     
     <title>🏹 Sofía Fernanda | Mis 7 Años</title>
     <meta property="og:title" content="🏹 ¡Estás invitado a la aventura de Sofía Fernanda!">
-    <meta property="og:description" content="Acompáñanos a celebrar mis 7 años al estilo de Valiente.">
     <meta property="og:image" content="https://www.dropbox.com/scl/fi/bif1qrd06j724dvfrazch/SofiaFernandaportada.jpg?rlkey=qnj2apwyhtv69pv984ewp04uo&raw=1">
-    <meta property="og:type" content="website">
 
     <script>
         const CONFIG = {
-            tituloCompartir: "🏹 ¡Gran Aventura de Sofía Fernanda!",
-            imagenCompartir: "https://www.dropbox.com/scl/fi/bif1qrd06j724dvfrazch/SofiaFernandaportada.jpg?rlkey=qnj2apwyhtv69pv984ewp04uo&raw=1",
             nombreFestejada: "Sofía Fernanda",
             cumpleNumero: "7 AÑOS",
             fechaTexto: "DOMINGO 12 DE ABRIL",
             horaEvento: "5:00 PM",
             fotoPortada: "https://www.dropbox.com/scl/fi/bif1qrd06j724dvfrazch/SofiaFernandaportada.jpg?rlkey=qnj2apwyhtv69pv984ewp04uo&raw=1",
+            // ENLACE CORREGIDO PARA DROPBOX
             videoURL: "https://www.dropbox.com/scl/fi/svjwal022tqo751u0eeow/SofiaFernabdaVID.mp4?rlkey=8vq9ttyqxs6xdqa9gcb715sce&raw=1",
             fotoFinal: "https://www.dropbox.com/scl/fi/wfzmx8opjysgc39lomk6d/SofiaFernanda.jpg?rlkey=olaxrnzuau0h6xxgefgb2s6jj&raw=1",
             numeroWhatsApp: "525541938419",
@@ -32,35 +29,26 @@
     
     <style>
         :root { --verde: #0b4d36; --oro: #d4af37; --crema: #fdfcf9; }
-        body { margin: 0; padding: 0; background-color: #0b4d36; background-image: repeating-linear-gradient(45deg, rgba(0,0,0,0.1) 0px, rgba(0,0,0,0.1) 2px, transparent 2px, transparent 40px), linear-gradient(to right, #093d2b 1px, transparent 1px), linear-gradient(to bottom, #093d2b 1px, transparent 1px); background-size: 40px 40px; font-family: 'Montserrat', sans-serif; text-align: center; user-select: none; }
+        body { margin: 0; padding: 0; background-color: #0b4d36; background-image: repeating-linear-gradient(45deg, rgba(0,0,0,0.1) 0px, rgba(0,0,0,0.1) 2px, transparent 2px, transparent 40px), linear-gradient(to right, #093d2b 1px, transparent 1px), linear-gradient(to bottom, #093d2b 1px, transparent 1px); background-size: 40px 40px; font-family: 'Montserrat', sans-serif; text-align: center; }
         .wrapper { max-width: 480px; margin: 0 auto; background-color: #fff; border: 6px solid var(--oro); box-shadow: 0 0 50px rgba(0,0,0,0.6); }
         .header { padding: 35px 20px; background-color: var(--crema); border-bottom: 5px solid var(--verde); }
-        .img-main { width: 100%; height: auto; border: 3px solid var(--oro); border-radius: 4px; pointer-events: none; }
-        .nombre-portada { font-family: 'Great Vibes', cursive; font-size: 4.8rem; color: var(--verde); margin: 25px 0 0; line-height: 0.9; }
+        .img-main { width: 100%; height: auto; border: 3px solid var(--oro); border-radius: 4px; }
+        .nombre-portada { font-family: 'Great Vibes', cursive; font-size: 4.2rem; color: var(--verde); margin: 20px 0 0; line-height: 1; }
         .edad-portada { font-family: 'Playfair Display', serif; color: var(--oro); font-weight: bold; font-size: 1.8rem; letter-spacing: 5px; margin: 10px 0; }
-        .fecha-portada { font-weight: bold; color: var(--verde); letter-spacing: 3px; font-size: 1.1rem; text-transform: uppercase; }
-        .frase { padding: 40px 30px; background: white; font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.2rem; color: #444; border-bottom: 1px solid #eee; }
-        .video-container { width: 100%; border-top: 4px solid var(--oro); border-bottom: 4px solid var(--oro); background: #000; line-height: 0; }
-        video { width: 100%; height: auto; outline: none; }
+        .video-container { width: 100%; border-top: 4px solid var(--oro); border-bottom: 4px solid var(--oro); background: #000; overflow: hidden; }
+        video { width: 100%; height: auto; display: block; }
         .info-card { background: var(--crema); padding: 35px 20px; border: 2px solid var(--verde); margin: 30px 20px; }
-        .btn-verde { display: inline-block; margin-top: 20px; padding: 15px 40px; background-color: var(--verde); color: white; text-decoration: none; border-radius: 50px; font-weight: bold; letter-spacing: 2px; box-shadow: 0 5px 15px rgba(11,77,54,0.4); }
-        
-        /* SECCIÓN DE CIERRE MEJORADA */
+        .btn-verde { display: inline-block; margin-top: 20px; padding: 15px 40px; background-color: var(--verde); color: white; text-decoration: none; border-radius: 50px; font-weight: bold; }
         .footer-info { padding: 45px 30px; background: var(--crema); border-top: 2px solid var(--oro); }
-        .texto-decorativo { font-size: 0.9rem; color: var(--verde); font-weight: bold; letter-spacing: 1px; margin-bottom: 15px; text-transform: uppercase; }
-        .frase-final { font-family: 'Playfair Display', serif; font-style: italic; font-size: 1rem; color: #555; line-height: 1.5; margin-bottom: 25px; }
-
         .timer-container { display: flex; justify-content: center; gap: 10px; margin: 25px 0; }
         .t-block { background: var(--verde); padding: 12px; border-radius: 6px; min-width: 60px; color: white; border: 1px solid var(--oro); }
         .t-val { display: block; font-size: 1.8rem; font-weight: bold; color: var(--oro); }
-        .t-lab { font-size: 0.6rem; text-transform: uppercase; font-weight: bold; }
-
-        .btn-rsvp { display: inline-block; width: 85%; padding: 22px 0; background-color: var(--verde); color: white; text-decoration: none; border-radius: 5px; font-weight: bold; letter-spacing: 2px; margin: 30px 0 60px; animation: bounce 2s infinite; border: 2px solid var(--oro); }
+        .btn-rsvp { display: inline-block; width: 85%; padding: 22px 0; background-color: var(--verde); color: white; text-decoration: none; border-radius: 5px; font-weight: bold; margin: 30px 0 60px; animation: bounce 2s infinite; border: 2px solid var(--oro); }
         @keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-7px); } }
-        #music-toggle { position: fixed; bottom: 25px; left: 25px; background: var(--verde); color: var(--oro); width: 45px; height: 45px; border-radius: 50%; display: flex; align-items: center; justify-content: center; z-index: 1000; border: 2px solid var(--oro); cursor: pointer; font-size: 20px; }
+        #music-toggle { position: fixed; bottom: 25px; left: 25px; background: var(--verde); color: var(--oro); width: 45px; height: 45px; border-radius: 50%; display: flex; align-items: center; justify-content: center; z-index: 1000; border: 2px solid var(--oro); cursor: pointer; }
     </style>
 </head>
-<body oncontextmenu="return false;">
+<body>
 
     <div id="music-toggle" onclick="toggleMusic()">🔈</div>
 
@@ -69,50 +57,40 @@
             <img id="elFotoPortada" src="" class="img-main">
             <h1 id="elNombre" class="nombre-portada"></h1>
             <div id="elCumple" class="edad-portada"></div>
-            <div id="elFecha" class="fecha-portada"></div>
+            <div id="elFecha" style="font-weight: bold; color: var(--verde); letter-spacing: 2px;"></div>
         </div>
 
-        <div class="frase">
-            "Nuestro destino vive dentro de nosotros, solo tienes que ser lo suficientemente valiente para verlo."
-            <br><br>
-            <span style="font-size: 1rem; color: var(--verde); font-weight: bold; font-style: normal;">¡TE INVITO A MI GRAN AVENTURA!</span>
+        <div style="padding: 40px 30px; font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.1rem;">
+            "Si tuvieras la oportunidad de cambiar tu destino... ¿lo harías?"
         </div>
 
         <div class="video-container">
-            <video id="elVideo" loop playsinline autoplay muted oncontextmenu="return false;">
-                <source src="" type="video/mp4">
+            <video id="elVideo" loop playsinline autoplay muted poster="https://www.dropbox.com/scl/fi/bif1qrd06j724dvfrazch/SofiaFernandaportada.jpg?rlkey=qnj2apwyhtv69pv984ewp04uo&raw=1">
+                <source src="https://www.dropbox.com/scl/fi/svjwal022tqo751u0eeow/SofiaFernabdaVID.mp4?rlkey=8vq9ttyqxs6xdqa9gcb715sce&raw=1" type="video/mp4">
             </video>
         </div>
 
-        <section>
-            <div class="info-card">
-                <p style="letter-spacing: 4px; font-size: 0.75rem; font-weight: bold; color: var(--oro);">LUGAR DE LA REUNIÓN:</p>
-                <h3 style="font-family: 'Playfair Display', serif; font-size: 2rem; margin: 10px 0; color: var(--verde);">¡No faltes al reino!</h3>
-                <p>La cita es a las <strong id="elHora"></strong></p>
-                <a id="elMapa" href="" target="_blank" class="btn-verde">📍 VER UBICACIÓN</a>
-            </div>
-        </section>
+        <div class="info-card">
+            <p style="letter-spacing: 4px; font-size: 0.75rem; font-weight: bold; color: var(--oro);">LUGAR DE LA REUNIÓN:</p>
+            <h3 style="font-family: 'Playfair Display', serif; font-size: 2rem; color: var(--verde); margin: 10px 0;">¡No faltes al reino!</h3>
+            <p>La cita es a las <strong id="elHora"></strong></p>
+            <a id="elMapa" href="" target="_blank" class="btn-verde">📍 VER UBICACIÓN</a>
+        </div>
 
         <img id="elFotoFinal" src="" class="img-main" style="border: none; border-top: 4px solid var(--oro); border-radius: 0;">
 
         <div class="footer-info">
-            <p class="texto-decorativo">🏹 Prepara tu arco y tu valor</p>
-            <p class="frase-final">"No se necesita una corona para ser una princesa, se necesita un corazón valiente para cambiar tu propio destino."</p>
-            
-            <div style="margin-top: 10px;">
-                <p style="font-size: 0.75rem; letter-spacing: 3px; font-weight: bold; color: var(--verde);">LA AVENTURA COMIENZA EN:</p>
-                <div class="timer-container">
-                    <div class="t-block"><span class="t-val" id="d">00</span><span class="t-lab">Días</span></div>
-                    <div class="t-block"><span class="t-val" id="h">00</span><span class="t-lab">Hrs</span></div>
-                    <div class="t-block"><span class="t-val" id="m">00</span><span class="t-lab">Min</span></div>
-                    <div class="t-block"><span class="t-val" id="s">00</span><span class="t-lab">Seg</span></div>
-                </div>
+            <p style="font-size: 0.9rem; color: var(--verde); font-weight: bold;">🏹 Prepara tu arco y tu valor</p>
+            <div class="timer-container">
+                <div class="t-block"><span class="t-val" id="d">00</span><span>Días</span></div>
+                <div class="t-block"><span class="t-val" id="h">00</span><span>Hrs</span></div>
+                <div class="t-block"><span class="t-val" id="m">00</span><span>Min</span></div>
+                <div class="t-block"><span class="t-val" id="s">00</span><span>Seg</span></div>
             </div>
         </div>
 
         <section style="background: white; padding-bottom: 20px;">
-            <h2 style="font-family: 'Great Vibes'; font-size: 4rem; color: var(--verde); margin: 20px 0 0;">¡Te espero!</h2>
-            <p style="padding: 0 30px; font-size: 0.95rem; color: #555;">Tu presencia hará este cuento de hadas realidad.</p>
+            <h2 style="font-family: 'Great Vibes'; font-size: 3.5rem; color: var(--verde); margin: 20px 0 0;">¡Te espero!</h2>
             <a id="elRSVP" href="" class="btn-rsvp">CONFIRMAR ASISTENCIA</a>
         </section>
     </div>
@@ -125,25 +103,26 @@
         document.getElementById('elNombre').innerText = CONFIG.nombreFestejada;
         document.getElementById('elCumple').innerText = CONFIG.cumpleNumero;
         document.getElementById('elFecha').innerText = CONFIG.fechaTexto;
-        v.querySelector('source').src = CONFIG.videoURL;
-        v.load();
         document.getElementById('elHora').innerText = CONFIG.horaEvento;
         document.getElementById('elMapa').href = CONFIG.mapaURL;
         document.getElementById('elFotoFinal').src = CONFIG.fotoFinal;
         document.getElementById('elRSVP').href = `https://wa.me/${CONFIG.numeroWhatsApp}?text=${encodeURIComponent(CONFIG.mensajeWA)}`;
 
-        // Activa el sonido al interactuar (clic o scroll)
-        const unlockAudio = () => {
+        // INTENTO DE PLAY FORZADO
+        const playVideo = () => {
             v.muted = false;
+            v.play().catch(e => console.log("Esperando interacción..."));
             mBtn.innerText = "🔊";
-            window.removeEventListener('click', unlockAudio);
-            window.removeEventListener('scroll', unlockAudio);
+            // Quitamos los eventos una vez que funcione
+            ["click", "touchstart", "scroll"].forEach(ev => window.removeEventListener(ev, playVideo));
         };
-        window.addEventListener('click', unlockAudio);
-        window.addEventListener('scroll', unlockAudio);
+
+        window.addEventListener('click', playVideo);
+        window.addEventListener('touchstart', playVideo);
+        window.addEventListener('scroll', playVideo);
 
         function toggleMusic() {
-            if (v.muted) { v.muted = false; mBtn.innerText = "🔊"; } 
+            if (v.muted) { v.muted = false; v.play(); mBtn.innerText = "🔊"; } 
             else { v.muted = true; mBtn.innerText = "🔈"; }
         }
 
@@ -158,7 +137,7 @@
                 document.getElementById('s').innerText = String(Math.floor((diff % (1000*60)) / 1000)).padStart(2, '0');
             }
         }
-        timer(); setInterval(timer, 1000);
+        setInterval(timer, 1000);
     </script>
 </body>
 </html>
