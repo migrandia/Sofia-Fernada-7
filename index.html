@@ -8,24 +8,16 @@
         const CONFIG = {
             tituloCompartir: "🏹 ¡Gran Aventura de Sofía Fernanda!",
             imagenCompartir: "https://www.dropbox.com/scl/fi/bif1qrd06j724dvfrazch/SofiaFernandaportada.jpg?rlkey=qnj2apwyhtv69pv984ewp04uo&raw=1",
-
-            // --- TEXTOS ---
             nombreFestejada: "Sofía Fernanda",
             cumpleNumero: "7 AÑOS",
             fechaTexto: "DOMINGO 12 DE ABRIL",
             horaEvento: "5:00 PM",
-            
-            // --- MULTIMEDIA (VIDEO ACTUALIZADO) ---
             fotoPortada: "https://www.dropbox.com/scl/fi/bif1qrd06j724dvfrazch/SofiaFernandaportada.jpg?rlkey=qnj2apwyhtv69pv984ewp04uo&raw=1",
             videoURL: "https://www.dropbox.com/scl/fi/svjwal022tqo751u0eeow/SofiaFernabdaVID.mp4?rlkey=8vq9ttyqxs6xdqa9gcb715sce&raw=1",
             fotoFinal: "https://www.dropbox.com/scl/fi/wfzmx8opjysgc39lomk6d/SofiaFernanda.jpg?rlkey=olaxrnzuau0h6xxgefgb2s6jj&raw=1",
-
-            // --- WHATSAPP & MAPA ---
             numeroWhatsApp: "521234567890",
             mensajeWA: "¡Hola! Confirmo mi asistencia al cumple de Sofía Fernanda",
             mapaURL: "https://www.google.com/maps/place/C.+24+de+Febrero,+Las+Torres,+54942+Buenavista,+M%C3%A9x./@19.6065162,-99.1579239,17z/data=!3m1!4b1!4m6!3m5!1s0x85d1f66572c324ef:0x24570cd75c7902b3!8m2!3d19.6065112!4d-99.155349!16s%2Fg%2F1txc7cl5?entry=ttu&g_ep=EgoyMDI2MDMyNC4wIKXMDSoASAFQAw%3D%3D",
-
-            // --- FECHA CONTADOR ---
             fechaContador: "April 12, 2026 17:00:00"
         };
     </script>
@@ -35,65 +27,31 @@
     
     <style>
         :root { --verde: #0b4d36; --oro: #d4af37; --crema: #fdfcf9; }
-        
-        body { 
-            margin: 0; padding: 0; 
-            background-color: #0b4d36;
-            /* Fondo de cuadros estilo Escocés */
-            background-image:  
-                repeating-linear-gradient(45deg, rgba(0,0,0,0.1) 0px, rgba(0,0,0,0.1) 2px, transparent 2px, transparent 40px),
-                linear-gradient(to right, #093d2b 1px, transparent 1px),
-                linear-gradient(to bottom, #093d2b 1px, transparent 1px);
-            background-size: 40px 40px;
-            font-family: 'Montserrat', sans-serif; 
-            text-align: center; 
-            user-select: none; 
-        }
-
-        .wrapper { 
-            max-width: 480px; 
-            margin: 0 auto; 
-            background-color: #fff; 
-            border: 6px solid var(--oro);
-            box-shadow: 0 0 50px rgba(0,0,0,0.6);
-        }
-        
-        /* PORTADA */
+        body { margin: 0; padding: 0; background-color: #0b4d36; background-image: repeating-linear-gradient(45deg, rgba(0,0,0,0.1) 0px, rgba(0,0,0,0.1) 2px, transparent 2px, transparent 40px), linear-gradient(to right, #093d2b 1px, transparent 1px), linear-gradient(to bottom, #093d2b 1px, transparent 1px); background-size: 40px 40px; font-family: 'Montserrat', sans-serif; text-align: center; user-select: none; }
+        .wrapper { max-width: 480px; margin: 0 auto; background-color: #fff; border: 6px solid var(--oro); box-shadow: 0 0 50px rgba(0,0,0,0.6); }
         .header { padding: 35px 20px; background-color: var(--crema); border-bottom: 5px solid var(--verde); }
         .img-main { width: 100%; height: auto; border: 3px solid var(--oro); border-radius: 4px; pointer-events: none; }
-        
         .nombre-portada { font-family: 'Great Vibes', cursive; font-size: 4.8rem; color: var(--verde); margin: 25px 0 0; line-height: 0.9; }
         .edad-portada { font-family: 'Playfair Display', serif; color: var(--oro); font-weight: bold; font-size: 1.8rem; letter-spacing: 5px; margin: 10px 0; }
         .fecha-portada { font-weight: bold; color: var(--verde); letter-spacing: 3px; font-size: 1.1rem; text-transform: uppercase; }
-
         .frase { padding: 40px 30px; background: white; font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.2rem; color: #444; border-bottom: 1px solid #eee; }
-
-        /* VIDEO */
         .video-container { width: 100%; border-top: 4px solid var(--oro); border-bottom: 4px solid var(--oro); background: #000; line-height: 0; }
         video { width: 100%; height: auto; outline: none; }
-
-        /* CARD UBICACIÓN */
         .info-card { background: var(--crema); padding: 35px 20px; border: 2px solid var(--verde); margin: 30px 20px; }
         .btn-verde { display: inline-block; margin-top: 20px; padding: 15px 40px; background-color: var(--verde); color: white; text-decoration: none; border-radius: 50px; font-weight: bold; letter-spacing: 2px; box-shadow: 0 5px 15px rgba(11,77,54,0.4); }
-
-        /* CIERRE */
         .footer-info { padding: 45px 30px; background: var(--crema); }
-        .texto-extra { font-size: 0.85rem; color: var(--verde); font-weight: bold; letter-spacing: 2px; margin-bottom: 10px; text-transform: uppercase; }
-
         .timer-container { display: flex; justify-content: center; gap: 10px; margin: 25px 0; }
         .t-block { background: var(--verde); padding: 12px; border-radius: 6px; min-width: 60px; color: white; border: 1px solid var(--oro); }
         .t-val { display: block; font-size: 1.8rem; font-weight: bold; color: var(--oro); }
         .t-lab { font-size: 0.6rem; text-transform: uppercase; font-weight: bold; }
-
-        .btn-rsvp { display: inline-block; width: 85%; padding: 22px 0; background-color: var(--verde); color: white; text-decoration: none; border-radius: 5px; font-weight: bold; letter-spacing: 2px; margin: 30px 0 60px; animation: bounce 2s infinite; border: 2px solid var(--oro); box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
+        .btn-rsvp { display: inline-block; width: 85%; padding: 22px 0; background-color: var(--verde); color: white; text-decoration: none; border-radius: 5px; font-weight: bold; letter-spacing: 2px; margin: 30px 0 60px; animation: bounce 2s infinite; border: 2px solid var(--oro); }
         @keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-7px); } }
-
-        #music-toggle { position: fixed; bottom: 25px; left: 25px; background: var(--verde); color: var(--oro); width: 45px; height: 45px; border-radius: 50%; display: flex; align-items: center; justify-content: center; z-index: 1000; border: 2px solid var(--oro); cursor: pointer; font-size: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+        #music-toggle { position: fixed; bottom: 25px; left: 25px; background: var(--verde); color: var(--oro); width: 45px; height: 45px; border-radius: 50%; display: flex; align-items: center; justify-content: center; z-index: 1000; border: 2px solid var(--oro); cursor: pointer; font-size: 20px; }
     </style>
 </head>
 <body oncontextmenu="return false;">
 
-    <div id="music-toggle" onclick="toggleMusic()">🔊</div>
+    <div id="music-toggle" onclick="toggleMusic()">🔈</div>
 
     <div class="wrapper">
         <div class="header">
@@ -110,7 +68,7 @@
         </div>
 
         <div class="video-container">
-            <video id="elVideo" loop playsinline oncontextmenu="return false;">
+            <video id="elVideo" loop playsinline autoplay muted oncontextmenu="return false;">
                 <source src="" type="video/mp4">
             </video>
         </div>
@@ -127,11 +85,8 @@
         <img id="elFotoFinal" src="" class="img-main" style="border: none; border-top: 4px solid var(--oro); border-radius: 0;">
 
         <div class="footer-info">
-            <p class="texto-extra">🏹 Prepara tu arco y tu valor</p>
-            <p style="font-style: italic; font-size: 0.95rem; color: #555;">Será un día lleno de juegos, magia y mucha diversión.</p>
-            
+            <p style="font-size: 0.85rem; color: var(--verde); font-weight: bold; letter-spacing: 2px;">🏹 Prepara tu arco y tu valor</p>
             <div style="margin-top: 40px;">
-                <p style="font-size: 0.75rem; letter-spacing: 3px; font-weight: bold; color: var(--verde);">EL TIEMPO SE AGOTA EN:</p>
                 <div class="timer-container">
                     <div class="t-block"><span class="t-val" id="d">00</span><span class="t-lab">Días</span></div>
                     <div class="t-block"><span class="t-val" id="h">00</span><span class="t-lab">Hrs</span></div>
@@ -143,7 +98,6 @@
 
         <section style="background: white; padding-bottom: 20px;">
             <h2 style="font-family: 'Great Vibes'; font-size: 4rem; color: var(--verde); margin: 20px 0 0;">¡Te espero!</h2>
-            <p style="padding: 0 30px; font-size: 0.95rem;">Confirma tu asistencia para preparar el banquete real:</p>
             <a id="elRSVP" href="" class="btn-rsvp">CONFIRMAR ASISTENCIA</a>
         </section>
     </div>
@@ -152,7 +106,6 @@
         const v = document.getElementById('elVideo');
         const mBtn = document.getElementById('music-toggle');
 
-        // Cargar datos
         document.getElementById('elFotoPortada').src = CONFIG.fotoPortada;
         document.getElementById('elNombre').innerText = CONFIG.nombreFestejada;
         document.getElementById('elCumple').innerText = CONFIG.cumpleNumero;
@@ -164,17 +117,17 @@
         document.getElementById('elFotoFinal').src = CONFIG.fotoFinal;
         document.getElementById('elRSVP').href = `https://wa.me/${CONFIG.numeroWhatsApp}?text=${encodeURIComponent(CONFIG.mensajeWA)}`;
 
-        // Sonido al interactuar
+        // Activa el sonido al primer clic
         window.addEventListener('click', () => {
-            if (v.paused) { v.play(); mBtn.innerText = "🔊"; }
+            v.muted = false;
+            mBtn.innerText = "🔊";
         }, { once: true });
 
         function toggleMusic() {
-            if (v.paused) { v.play(); mBtn.innerText = "🔊"; } 
-            else { v.pause(); mBtn.innerText = "🔈"; }
+            if (v.muted) { v.muted = false; mBtn.innerText = "🔊"; } 
+            else { v.muted = true; mBtn.innerText = "🔈"; }
         }
 
-        // Contador
         function timer() {
             const dest = new Date(CONFIG.fechaContador).getTime();
             const now = new Date().getTime();
