@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
+    <title>🏹 Sofía Fernanda | Mis 7 Años</title>
+    <meta property="og:title" content="🏹 ¡Estás invitado a la aventura de Sofía Fernanda!">
+    <meta property="og:description" content="Acompáñanos a celebrar mis 7 años al estilo de Valiente.">
+    <meta property="og:image" content="https://www.dropbox.com/scl/fi/bif1qrd06j724dvfrazch/SofiaFernandaportada.jpg?rlkey=qnj2apwyhtv69pv984ewp04uo&raw=1">
+    <meta property="og:type" content="website">
+
     <script>
         const CONFIG = {
             tituloCompartir: "🏹 ¡Gran Aventura de Sofía Fernanda!",
@@ -22,7 +28,6 @@
         };
     </script>
 
-    <title>🏹 Sofía Fernanda | Mis 7 Años</title>
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;700&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
     
     <style>
@@ -39,11 +44,17 @@
         video { width: 100%; height: auto; outline: none; }
         .info-card { background: var(--crema); padding: 35px 20px; border: 2px solid var(--verde); margin: 30px 20px; }
         .btn-verde { display: inline-block; margin-top: 20px; padding: 15px 40px; background-color: var(--verde); color: white; text-decoration: none; border-radius: 50px; font-weight: bold; letter-spacing: 2px; box-shadow: 0 5px 15px rgba(11,77,54,0.4); }
-        .footer-info { padding: 45px 30px; background: var(--crema); }
+        
+        /* SECCIÓN DE CIERRE MEJORADA */
+        .footer-info { padding: 45px 30px; background: var(--crema); border-top: 2px solid var(--oro); }
+        .texto-decorativo { font-size: 0.9rem; color: var(--verde); font-weight: bold; letter-spacing: 1px; margin-bottom: 15px; text-transform: uppercase; }
+        .frase-final { font-family: 'Playfair Display', serif; font-style: italic; font-size: 1rem; color: #555; line-height: 1.5; margin-bottom: 25px; }
+
         .timer-container { display: flex; justify-content: center; gap: 10px; margin: 25px 0; }
         .t-block { background: var(--verde); padding: 12px; border-radius: 6px; min-width: 60px; color: white; border: 1px solid var(--oro); }
         .t-val { display: block; font-size: 1.8rem; font-weight: bold; color: var(--oro); }
         .t-lab { font-size: 0.6rem; text-transform: uppercase; font-weight: bold; }
+
         .btn-rsvp { display: inline-block; width: 85%; padding: 22px 0; background-color: var(--verde); color: white; text-decoration: none; border-radius: 5px; font-weight: bold; letter-spacing: 2px; margin: 30px 0 60px; animation: bounce 2s infinite; border: 2px solid var(--oro); }
         @keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-7px); } }
         #music-toggle { position: fixed; bottom: 25px; left: 25px; background: var(--verde); color: var(--oro); width: 45px; height: 45px; border-radius: 50%; display: flex; align-items: center; justify-content: center; z-index: 1000; border: 2px solid var(--oro); cursor: pointer; font-size: 20px; }
@@ -62,7 +73,7 @@
         </div>
 
         <div class="frase">
-            "Si tuvieras la oportunidad de cambiar tu destino... ¿lo harías?"
+            "Nuestro destino vive dentro de nosotros, solo tienes que ser lo suficientemente valiente para verlo."
             <br><br>
             <span style="font-size: 1rem; color: var(--verde); font-weight: bold; font-style: normal;">¡TE INVITO A MI GRAN AVENTURA!</span>
         </div>
@@ -85,8 +96,11 @@
         <img id="elFotoFinal" src="" class="img-main" style="border: none; border-top: 4px solid var(--oro); border-radius: 0;">
 
         <div class="footer-info">
-            <p style="font-size: 0.85rem; color: var(--verde); font-weight: bold; letter-spacing: 2px;">🏹 Prepara tu arco y tu valor</p>
-            <div style="margin-top: 40px;">
+            <p class="texto-decorativo">🏹 Prepara tu arco y tu valor</p>
+            <p class="frase-final">"No se necesita una corona para ser una princesa, se necesita un corazón valiente para cambiar tu propio destino."</p>
+            
+            <div style="margin-top: 10px;">
+                <p style="font-size: 0.75rem; letter-spacing: 3px; font-weight: bold; color: var(--verde);">LA AVENTURA COMIENZA EN:</p>
                 <div class="timer-container">
                     <div class="t-block"><span class="t-val" id="d">00</span><span class="t-lab">Días</span></div>
                     <div class="t-block"><span class="t-val" id="h">00</span><span class="t-lab">Hrs</span></div>
@@ -98,6 +112,7 @@
 
         <section style="background: white; padding-bottom: 20px;">
             <h2 style="font-family: 'Great Vibes'; font-size: 4rem; color: var(--verde); margin: 20px 0 0;">¡Te espero!</h2>
+            <p style="padding: 0 30px; font-size: 0.95rem; color: #555;">Tu presencia hará este cuento de hadas realidad.</p>
             <a id="elRSVP" href="" class="btn-rsvp">CONFIRMAR ASISTENCIA</a>
         </section>
     </div>
@@ -117,11 +132,15 @@
         document.getElementById('elFotoFinal').src = CONFIG.fotoFinal;
         document.getElementById('elRSVP').href = `https://wa.me/${CONFIG.numeroWhatsApp}?text=${encodeURIComponent(CONFIG.mensajeWA)}`;
 
-        // Activa el sonido al primer clic
-        window.addEventListener('click', () => {
+        // Activa el sonido al interactuar (clic o scroll)
+        const unlockAudio = () => {
             v.muted = false;
             mBtn.innerText = "🔊";
-        }, { once: true });
+            window.removeEventListener('click', unlockAudio);
+            window.removeEventListener('scroll', unlockAudio);
+        };
+        window.addEventListener('click', unlockAudio);
+        window.addEventListener('scroll', unlockAudio);
 
         function toggleMusic() {
             if (v.muted) { v.muted = false; mBtn.innerText = "🔊"; } 
