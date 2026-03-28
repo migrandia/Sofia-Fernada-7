@@ -6,90 +6,107 @@
     
     <script>
         const CONFIG = {
-            // --- CONFIGURACIÓN DE COMPARTIR (WHATSAPP) ---
-            tituloCompartir: "🏹 ¡Acompáñanos a la Gran Aventura de Sofía Fernanda!",
-            descripCompartir: "Mis 7 Años al estilo de Valiente. ¡No faltes!",
+            tituloCompartir: "🏹 ¡Gran Aventura de Sofía Fernanda!",
             imagenCompartir: "https://www.dropbox.com/scl/fi/bif1qrd06j724dvfrazch/SofiaFernandaportada.jpg?rlkey=qnj2apwyhtv69pv984ewp04uo&raw=1",
 
             // --- TEXTOS ---
             nombreFestejada: "Sofía Fernanda",
-            cumpleNumero: "Mis 7 Años",
+            cumpleNumero: "7 AÑOS",
             fechaTexto: "DOMINGO 12 DE ABRIL",
-            mensajeBienvenida: "Había una vez una pequeña princesa que soñaba con un baile mágico rodeada de sus mejores amigos... ¡Ese día ha llegado!",
-            lugarNombre: "¡Te esperamos!",
             horaEvento: "5:00 PM",
-            mapaURL: "https://www.google.com/maps/place/C.+24+de+Febrero,+Las+Torres,+54942+Buenavista,+M%C3%A9x./@19.6065162,-99.1579239,17z/data=!3m1!4b1!4m6!3m5!1s0x85d1f66572c324ef:0x24570cd75c7902b3!8m2!3d19.6065112!4d-99.155349!16s%2Fg%2F1txc7cl5?entry=ttu&g_ep=EgoyMDI2MDMyNC4wIKXMDSoASAFQAw%3D%3D",
             
-            // --- MULTIMEDIA ---
+            // --- MULTIMEDIA (VIDEO ACTUALIZADO) ---
             fotoPortada: "https://www.dropbox.com/scl/fi/bif1qrd06j724dvfrazch/SofiaFernandaportada.jpg?rlkey=qnj2apwyhtv69pv984ewp04uo&raw=1",
-            videoURL: "https://www.dropbox.com/scl/fi/nmcp34zzwwz88tdlxpu16/SofiaFernadaVideo.mp4?rlkey=qy8vd1xigsrmz4jc3tov1eowj&raw=1",
+            videoURL: "https://www.dropbox.com/scl/fi/svjwal022tqo751u0eeow/SofiaFernabdaVID.mp4?rlkey=8vq9ttyqxs6xdqa9gcb715sce&raw=1",
             fotoFinal: "https://www.dropbox.com/scl/fi/wfzmx8opjysgc39lomk6d/SofiaFernanda.jpg?rlkey=olaxrnzuau0h6xxgefgb2s6jj&raw=1",
 
-            // --- WHATSAPP ---
+            // --- WHATSAPP & MAPA ---
             numeroWhatsApp: "521234567890",
             mensajeWA: "¡Hola! Confirmo mi asistencia al cumple de Sofía Fernanda",
+            mapaURL: "https://www.google.com/maps/place/C.+24+de+Febrero,+Las+Torres,+54942+Buenavista,+M%C3%A9x./@19.6065162,-99.1579239,17z/data=!3m1!4b1!4m6!3m5!1s0x85d1f66572c324ef:0x24570cd75c7902b3!8m2!3d19.6065112!4d-99.155349!16s%2Fg%2F1txc7cl5?entry=ttu&g_ep=EgoyMDI2MDMyNC4wIKXMDSoASAFQAw%3D%3D",
 
-            // --- CONTADOR ---
-            fechaContador: "April 12, 2026 17:00:00",
-
-            // --- COLORES ---
-            colorVerde: "#0b4d36",
-            colorOro: "#d4af37"
+            // --- FECHA CONTADOR ---
+            fechaContador: "April 12, 2026 17:00:00"
         };
     </script>
 
-    <title>👑 Invitación Valiente | Sofía Fernanda</title>
-    <meta property="og:title" content="🏹 ¡Estás invitado a la aventura de Sofía Fernanda!">
-    <meta property="og:image" content="https://www.dropbox.com/scl/fi/bif1qrd06j724dvfrazch/SofiaFernandaportada.jpg?rlkey=qnj2apwyhtv69pv984ewp04uo&raw=1">
-    
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <title>🏹 Sofía Fernanda | Mis 7 Años</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;700&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
     
     <style>
         :root { --verde: #0b4d36; --oro: #d4af37; --crema: #fdfcf9; }
-        body { margin: 0; padding: 0; background-color: #f0f4f1; font-family: 'Montserrat', sans-serif; text-align: center; user-select: none; }
-        .wrapper { max-width: 480px; margin: 0 auto; background-color: #fff; position: relative; border: 8px double var(--verde); box-shadow: 0 10px 40px rgba(0,0,0,0.1); }
         
-        .header { padding: 40px 20px; background-color: var(--crema); }
-        .img-main { width: 100%; height: auto; border: 4px solid var(--oro); border-radius: 4px; }
+        body { 
+            margin: 0; padding: 0; 
+            background-color: #0b4d36;
+            /* Fondo de cuadros estilo Escocés */
+            background-image:  
+                repeating-linear-gradient(45deg, rgba(0,0,0,0.1) 0px, rgba(0,0,0,0.1) 2px, transparent 2px, transparent 40px),
+                linear-gradient(to right, #093d2b 1px, transparent 1px),
+                linear-gradient(to bottom, #093d2b 1px, transparent 1px);
+            background-size: 40px 40px;
+            font-family: 'Montserrat', sans-serif; 
+            text-align: center; 
+            user-select: none; 
+        }
+
+        .wrapper { 
+            max-width: 480px; 
+            margin: 0 auto; 
+            background-color: #fff; 
+            border: 6px solid var(--oro);
+            box-shadow: 0 0 50px rgba(0,0,0,0.6);
+        }
         
-        h1.nombre { font-family: 'Great Vibes', cursive; font-size: 4.5rem; color: var(--verde); margin: 15px 0 0; }
-        .cumple-n { font-family: 'Playfair Display', serif; font-size: 1.5rem; letter-spacing: 4px; color: var(--oro); font-weight: bold; text-transform: uppercase; margin: 5px 0 15px; }
+        /* PORTADA */
+        .header { padding: 35px 20px; background-color: var(--crema); border-bottom: 5px solid var(--verde); }
+        .img-main { width: 100%; height: auto; border: 3px solid var(--oro); border-radius: 4px; pointer-events: none; }
         
-        .mensaje { padding: 30px 25px; font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.2rem; line-height: 1.6; }
+        .nombre-portada { font-family: 'Great Vibes', cursive; font-size: 4.8rem; color: var(--verde); margin: 25px 0 0; line-height: 0.9; }
+        .edad-portada { font-family: 'Playfair Display', serif; color: var(--oro); font-weight: bold; font-size: 1.8rem; letter-spacing: 5px; margin: 10px 0; }
+        .fecha-portada { font-weight: bold; color: var(--verde); letter-spacing: 3px; font-size: 1.1rem; text-transform: uppercase; }
 
-        .video-container { width: 100%; border-top: 3px solid var(--oro); border-bottom: 3px solid var(--oro); background: #000; line-height: 0; position: relative; }
-        video { width: 100%; outline: none; }
+        .frase { padding: 40px 30px; background: white; font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.2rem; color: #444; border-bottom: 1px solid #eee; }
 
-        .info-card { background: var(--crema); padding: 30px; border: 1px solid var(--verde); margin: 20px; }
-        .btn-verde { display: inline-flex; align-items: center; gap: 10px; margin-top: 20px; padding: 15px 30px; background-color: var(--verde); color: white; text-decoration: none; border-radius: 50px; font-weight: bold; font-size: 0.8rem; letter-spacing: 2px; box-shadow: 0 4px 12px rgba(11,77,54,0.3); }
+        /* VIDEO */
+        .video-container { width: 100%; border-top: 4px solid var(--oro); border-bottom: 4px solid var(--oro); background: #000; line-height: 0; }
+        video { width: 100%; height: auto; outline: none; }
 
-        .timer-container { display: flex; justify-content: center; gap: 10px; margin: 20px 0; }
-        .t-block { background: var(--verde); padding: 10px; border-radius: 8px; min-width: 60px; color: white; border: 1px solid var(--oro); }
+        /* CARD UBICACIÓN */
+        .info-card { background: var(--crema); padding: 35px 20px; border: 2px solid var(--verde); margin: 30px 20px; }
+        .btn-verde { display: inline-block; margin-top: 20px; padding: 15px 40px; background-color: var(--verde); color: white; text-decoration: none; border-radius: 50px; font-weight: bold; letter-spacing: 2px; box-shadow: 0 5px 15px rgba(11,77,54,0.4); }
+
+        /* CIERRE */
+        .footer-info { padding: 45px 30px; background: var(--crema); }
+        .texto-extra { font-size: 0.85rem; color: var(--verde); font-weight: bold; letter-spacing: 2px; margin-bottom: 10px; text-transform: uppercase; }
+
+        .timer-container { display: flex; justify-content: center; gap: 10px; margin: 25px 0; }
+        .t-block { background: var(--verde); padding: 12px; border-radius: 6px; min-width: 60px; color: white; border: 1px solid var(--oro); }
         .t-val { display: block; font-size: 1.8rem; font-weight: bold; color: var(--oro); }
-        .t-lab { font-size: 0.6rem; text-transform: uppercase; }
+        .t-lab { font-size: 0.6rem; text-transform: uppercase; font-weight: bold; }
 
-        .btn-rsvp { display: inline-block; width: 85%; padding: 20px 0; background-color: var(--verde); color: white; text-decoration: none; border-radius: 4px; font-weight: bold; letter-spacing: 2px; margin: 25px 0 60px; animation: bounce 2s infinite; }
-        @keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
+        .btn-rsvp { display: inline-block; width: 85%; padding: 22px 0; background-color: var(--verde); color: white; text-decoration: none; border-radius: 5px; font-weight: bold; letter-spacing: 2px; margin: 30px 0 60px; animation: bounce 2s infinite; border: 2px solid var(--oro); box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
+        @keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-7px); } }
 
-        /* Icono de música flotante */
-        #music-control { position: fixed; bottom: 20px; right: 20px; background: var(--verde); color: var(--oro); width: 45px; height: 45px; border-radius: 50%; display: flex; align-items: center; justify-content: center; z-index: 1000; border: 2px solid var(--oro); cursor: pointer; }
+        #music-toggle { position: fixed; bottom: 25px; left: 25px; background: var(--verde); color: var(--oro); width: 45px; height: 45px; border-radius: 50%; display: flex; align-items: center; justify-content: center; z-index: 1000; border: 2px solid var(--oro); cursor: pointer; font-size: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); }
     </style>
 </head>
-
 <body oncontextmenu="return false;">
 
-    <div id="music-control" onclick="toggleMusic()">🔊</div>
+    <div id="music-toggle" onclick="toggleMusic()">🔊</div>
 
     <div class="wrapper">
         <div class="header">
             <img id="elFotoPortada" src="" class="img-main">
-            <h1 id="elNombre" class="nombre"></h1>
-            <p id="elCumpleN" class="cumple-n"></p>
-            <p id="elFechaTxt" style="font-weight: bold; letter-spacing: 3px; color: var(--verde);"></p>
+            <h1 id="elNombre" class="nombre-portada"></h1>
+            <div id="elCumple" class="edad-portada"></div>
+            <div id="elFecha" class="fecha-portada"></div>
         </div>
 
-        <div class="mensaje">
-            <p id="elMensaje"></p>
+        <div class="frase">
+            "Si tuvieras la oportunidad de cambiar tu destino... ¿lo harías?"
+            <br><br>
+            <span style="font-size: 1rem; color: var(--verde); font-weight: bold; font-style: normal;">¡TE INVITO A MI GRAN AVENTURA!</span>
         </div>
 
         <div class="video-container">
@@ -100,63 +117,61 @@
 
         <section>
             <div class="info-card">
-                <p style="letter-spacing: 4px; font-size: 0.7rem; font-weight: bold; color: var(--oro);">NUESTRA AVENTURA ES EN:</p>
-                <h3 id="elLugar" style="font-family: 'Playfair Display', serif; font-size: 1.8rem; margin: 10px 0;"></h3>
+                <p style="letter-spacing: 4px; font-size: 0.75rem; font-weight: bold; color: var(--oro);">LUGAR DE LA REUNIÓN:</p>
+                <h3 style="font-family: 'Playfair Display', serif; font-size: 2rem; margin: 10px 0; color: var(--verde);">¡No faltes al reino!</h3>
                 <p>La cita es a las <strong id="elHora"></strong></p>
                 <a id="elMapa" href="" target="_blank" class="btn-verde">📍 VER UBICACIÓN</a>
             </div>
         </section>
 
-        <img id="elFotoFinal" src="" class="img-main" style="border: none; border-bottom: 3px solid var(--oro);">
+        <img id="elFotoFinal" src="" class="img-main" style="border: none; border-top: 4px solid var(--oro); border-radius: 0;">
 
-        <section style="background-color: var(--crema); padding: 30px 0;">
-            <p style="font-size: 0.8rem; letter-spacing: 3px; font-weight: bold; color: var(--verde);">FALTAN:</p>
-            <div class="timer-container">
-                <div class="t-block"><span class="t-val" id="d">00</span><span class="t-lab">Días</span></div>
-                <div class="t-block"><span class="t-val" id="h">00</span><span class="t-lab">Hrs</span></div>
-                <div class="t-block"><span class="t-val" id="m">00</span><span class="t-lab">Min</span></div>
-                <div class="t-block"><span class="t-val" id="s">00</span><span class="t-lab">Seg</span></div>
+        <div class="footer-info">
+            <p class="texto-extra">🏹 Prepara tu arco y tu valor</p>
+            <p style="font-style: italic; font-size: 0.95rem; color: #555;">Será un día lleno de juegos, magia y mucha diversión.</p>
+            
+            <div style="margin-top: 40px;">
+                <p style="font-size: 0.75rem; letter-spacing: 3px; font-weight: bold; color: var(--verde);">EL TIEMPO SE AGOTA EN:</p>
+                <div class="timer-container">
+                    <div class="t-block"><span class="t-val" id="d">00</span><span class="t-lab">Días</span></div>
+                    <div class="t-block"><span class="t-val" id="h">00</span><span class="t-lab">Hrs</span></div>
+                    <div class="t-block"><span class="t-val" id="m">00</span><span class="t-lab">Min</span></div>
+                    <div class="t-block"><span class="t-val" id="s">00</span><span class="t-lab">Seg</span></div>
+                </div>
             </div>
-        </section>
+        </div>
 
-        <h2 style="font-family: 'Great Vibes'; font-size: 3.5rem; color: var(--verde); margin-top: 40px;">¡Cambia tu destino!</h2>
-        <a id="elRSVP" href="" class="btn-rsvp">CONFIRMAR ASISTENCIA</a>
+        <section style="background: white; padding-bottom: 20px;">
+            <h2 style="font-family: 'Great Vibes'; font-size: 4rem; color: var(--verde); margin: 20px 0 0;">¡Te espero!</h2>
+            <p style="padding: 0 30px; font-size: 0.95rem;">Confirma tu asistencia para preparar el banquete real:</p>
+            <a id="elRSVP" href="" class="btn-rsvp">CONFIRMAR ASISTENCIA</a>
+        </section>
     </div>
 
     <script>
         const v = document.getElementById('elVideo');
-        const mBtn = document.getElementById('music-control');
+        const mBtn = document.getElementById('music-toggle');
 
         // Cargar datos
         document.getElementById('elFotoPortada').src = CONFIG.fotoPortada;
         document.getElementById('elNombre').innerText = CONFIG.nombreFestejada;
-        document.getElementById('elCumpleN').innerText = CONFIG.cumpleNumero;
-        document.getElementById('elFechaTxt').innerText = CONFIG.fechaTexto;
-        document.getElementById('elMensaje').innerText = CONFIG.mensajeBienvenida;
+        document.getElementById('elCumple').innerText = CONFIG.cumpleNumero;
+        document.getElementById('elFecha').innerText = CONFIG.fechaTexto;
         v.querySelector('source').src = CONFIG.videoURL;
         v.load();
-        document.getElementById('elLugar').innerText = CONFIG.lugarNombre;
         document.getElementById('elHora').innerText = CONFIG.horaEvento;
         document.getElementById('elMapa').href = CONFIG.mapaURL;
         document.getElementById('elFotoFinal').src = CONFIG.fotoFinal;
         document.getElementById('elRSVP').href = `https://wa.me/${CONFIG.numeroWhatsApp}?text=${encodeURIComponent(CONFIG.mensajeWA)}`;
 
-        // Reproducción automática al primer toque
+        // Sonido al interactuar
         window.addEventListener('click', () => {
-            if (v.paused) {
-                v.play();
-                mBtn.innerText = "🔊";
-            }
+            if (v.paused) { v.play(); mBtn.innerText = "🔊"; }
         }, { once: true });
 
         function toggleMusic() {
-            if (v.paused) {
-                v.play();
-                mBtn.innerText = "🔊";
-            } else {
-                v.pause();
-                mBtn.innerText = "🔈";
-            }
+            if (v.paused) { v.play(); mBtn.innerText = "🔊"; } 
+            else { v.pause(); mBtn.innerText = "🔈"; }
         }
 
         // Contador
