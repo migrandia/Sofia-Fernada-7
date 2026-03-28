@@ -15,7 +15,6 @@
             fechaTexto: "DOMINGO 12 DE ABRIL",
             horaEvento: "5:00 PM",
             fotoPortada: "https://www.dropbox.com/scl/fi/bif1qrd06j724dvfrazch/SofiaFernandaportada.jpg?rlkey=qnj2apwyhtv69pv984ewp04uo&raw=1",
-            // ENLACE CORREGIDO PARA DROPBOX
             videoURL: "https://www.dropbox.com/scl/fi/svjwal022tqo751u0eeow/SofiaFernabdaVID.mp4?rlkey=8vq9ttyqxs6xdqa9gcb715sce&raw=1",
             fotoFinal: "https://www.dropbox.com/scl/fi/wfzmx8opjysgc39lomk6d/SofiaFernanda.jpg?rlkey=olaxrnzuau0h6xxgefgb2s6jj&raw=1",
             numeroWhatsApp: "525541938419",
@@ -35,7 +34,7 @@
         .img-main { width: 100%; height: auto; border: 3px solid var(--oro); border-radius: 4px; }
         .nombre-portada { font-family: 'Great Vibes', cursive; font-size: 4.2rem; color: var(--verde); margin: 20px 0 0; line-height: 1; }
         .edad-portada { font-family: 'Playfair Display', serif; color: var(--oro); font-weight: bold; font-size: 1.8rem; letter-spacing: 5px; margin: 10px 0; }
-        .video-container { width: 100%; border-top: 4px solid var(--oro); border-bottom: 4px solid var(--oro); background: #000; overflow: hidden; }
+        .video-container { width: 100%; border-top: 4px solid var(--oro); border-bottom: 4px solid var(--oro); background: #000; line-height: 0; }
         video { width: 100%; height: auto; display: block; }
         .info-card { background: var(--crema); padding: 35px 20px; border: 2px solid var(--verde); margin: 30px 20px; }
         .btn-verde { display: inline-block; margin-top: 20px; padding: 15px 40px; background-color: var(--verde); color: white; text-decoration: none; border-radius: 50px; font-weight: bold; }
@@ -65,7 +64,7 @@
         </div>
 
         <div class="video-container">
-            <video id="elVideo" loop playsinline autoplay muted poster="https://www.dropbox.com/scl/fi/bif1qrd06j724dvfrazch/SofiaFernandaportada.jpg?rlkey=qnj2apwyhtv69pv984ewp04uo&raw=1">
+            <video id="elVideo" loop playsinline autoplay muted>
                 <source src="https://www.dropbox.com/scl/fi/svjwal022tqo751u0eeow/SofiaFernabdaVID.mp4?rlkey=8vq9ttyqxs6xdqa9gcb715sce&raw=1" type="video/mp4">
             </video>
         </div>
@@ -108,18 +107,15 @@
         document.getElementById('elFotoFinal').src = CONFIG.fotoFinal;
         document.getElementById('elRSVP').href = `https://wa.me/${CONFIG.numeroWhatsApp}?text=${encodeURIComponent(CONFIG.mensajeWA)}`;
 
-        // INTENTO DE PLAY FORZADO
-        const playVideo = () => {
+        const activarAudio = () => {
             v.muted = false;
-            v.play().catch(e => console.log("Esperando interacción..."));
+            v.play();
             mBtn.innerText = "🔊";
-            // Quitamos los eventos una vez que funcione
-            ["click", "touchstart", "scroll"].forEach(ev => window.removeEventListener(ev, playVideo));
+            ["click", "touchstart", "scroll"].forEach(e => window.removeEventListener(e, activarAudio));
         };
-
-        window.addEventListener('click', playVideo);
-        window.addEventListener('touchstart', playVideo);
-        window.addEventListener('scroll', playVideo);
+        window.addEventListener('click', activarAudio);
+        window.addEventListener('touchstart', activarAudio);
+        window.addEventListener('scroll', activarAudio);
 
         function toggleMusic() {
             if (v.muted) { v.muted = false; v.play(); mBtn.innerText = "🔊"; } 
