@@ -34,7 +34,7 @@
         .img-main { width: 100%; height: auto; border: 3px solid var(--oro); border-radius: 4px; }
         .nombre-portada { font-family: 'Great Vibes', cursive; font-size: 4.2rem; color: var(--verde); margin: 20px 0 0; line-height: 1; }
         .edad-portada { font-family: 'Playfair Display', serif; color: var(--oro); font-weight: bold; font-size: 1.8rem; letter-spacing: 5px; margin: 10px 0; }
-        .video-container { width: 100%; border-top: 4px solid var(--oro); border-bottom: 4px solid var(--oro); background: #000; line-height: 0; }
+        .video-container { width: 100%; border-top: 4px solid var(--oro); border-bottom: 4px solid var(--oro); background: #000; line-height: 0; position: relative; }
         video { width: 100%; height: auto; display: block; }
         .info-card { background: var(--crema); padding: 35px 20px; border: 2px solid var(--verde); margin: 30px 20px; }
         .btn-verde { display: inline-block; margin-top: 20px; padding: 15px 40px; background-color: var(--verde); color: white; text-decoration: none; border-radius: 50px; font-weight: bold; }
@@ -42,7 +42,7 @@
         .timer-container { display: flex; justify-content: center; gap: 10px; margin: 25px 0; }
         .t-block { background: var(--verde); padding: 12px; border-radius: 6px; min-width: 60px; color: white; border: 1px solid var(--oro); }
         .t-val { display: block; font-size: 1.8rem; font-weight: bold; color: var(--oro); }
-        .btn-rsvp { display: inline-block; width: 85%; padding: 22px 0; background-color: var(--verde); color: white; text-decoration: none; border-radius: 5px; font-weight: bold; margin: 30px 0 60px; animation: bounce 2s infinite; border: 2px solid var(--oro); }
+        .btn-rsvp { display: inline-block; width: 85%; padding: 22px 0; background-color: var(--verde); color: white; text-decoration: none; border-radius: 5px; font-weight: bold; margin: 30px 0 60px; animation: bounce 2s infinite; border: 2px solid var(--oro); letter-spacing: 2px; }
         @keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-7px); } }
         #music-toggle { position: fixed; bottom: 25px; left: 25px; background: var(--verde); color: var(--oro); width: 45px; height: 45px; border-radius: 50%; display: flex; align-items: center; justify-content: center; z-index: 1000; border: 2px solid var(--oro); cursor: pointer; }
     </style>
@@ -51,15 +51,15 @@
 
     <div id="music-toggle" onclick="toggleMusic()">🔈</div>
 
-    <div class="wrapper">
+    <div class="wrapper" id="mainWrapper">
         <div class="header">
             <img id="elFotoPortada" src="" class="img-main">
             <h1 id="elNombre" class="nombre-portada"></h1>
             <div id="elCumple" class="edad-portada"></div>
-            <div id="elFecha" style="font-weight: bold; color: var(--verde); letter-spacing: 2px;"></div>
+            <div id="elFecha" style="font-weight: bold; color: var(--verde); letter-spacing: 2px; text-transform: uppercase;"></div>
         </div>
 
-        <div style="padding: 40px 30px; font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.1rem;">
+        <div style="padding: 40px 30px; font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.1rem; color: #444;">
             "Si tuvieras la oportunidad de cambiar tu destino... ¿lo harías?"
         </div>
 
@@ -79,17 +79,20 @@
         <img id="elFotoFinal" src="" class="img-main" style="border: none; border-top: 4px solid var(--oro); border-radius: 0;">
 
         <div class="footer-info">
-            <p style="font-size: 0.9rem; color: var(--verde); font-weight: bold;">🏹 Prepara tu arco y tu valor</p>
+            <p style="font-size: 0.9rem; color: var(--verde); font-weight: bold; letter-spacing: 2px;">🏹 PREPARA TU ARCO Y TU VALOR</p>
             <div class="timer-container">
-                <div class="t-block"><span class="t-val" id="d">00</span><span>Días</span></div>
-                <div class="t-block"><span class="t-val" id="h">00</span><span>Hrs</span></div>
-                <div class="t-block"><span class="t-val" id="m">00</span><span>Min</span></div>
-                <div class="t-block"><span class="t-val" id="s">00</span><span>Seg</span></div>
+                <div class="t-block"><span class="t-val" id="d">00</span><span style="font-size: 0.6rem; text-transform: uppercase;">Días</span></div>
+                <div class="t-block"><span class="t-val" id="h">00</span><span style="font-size: 0.6rem; text-transform: uppercase;">Hrs</span></div>
+                <div class="t-block"><span class="t-val" id="m">00</span><span style="font-size: 0.6rem; text-transform: uppercase;">Min</span></div>
+                <div class="t-block"><span class="t-val" id="s">00</span><span style="font-size: 0.6rem; text-transform: uppercase;">Seg</span></div>
             </div>
         </div>
 
         <section style="background: white; padding-bottom: 20px;">
-            <h2 style="font-family: 'Great Vibes'; font-size: 3.5rem; color: var(--verde); margin: 20px 0 0;">Tu presencia hará este cuento de hadas realidad.</h2>
+            <h2 style="font-family: 'Great Vibes'; font-size: 3.5rem; color: var(--verde); margin: 20px 0 0;">¡Te espero!</h2>
+            <p style="padding: 0 40px; font-size: 1rem; color: #555; line-height: 1.6; font-style: italic;">
+                "Tu presencia hará que este día sea verdaderamente mágico. No se necesita una corona para ser una princesa, solo un corazón valiente. ¡Ven a celebrar conmigo!"
+            </p>
             <a id="elRSVP" href="" class="btn-rsvp">CONFIRMAR ASISTENCIA</a>
         </section>
     </div>
@@ -107,15 +110,17 @@
         document.getElementById('elFotoFinal').src = CONFIG.fotoFinal;
         document.getElementById('elRSVP').href = `https://wa.me/${CONFIG.numeroWhatsApp}?text=${encodeURIComponent(CONFIG.mensajeWA)}`;
 
-        const activarAudio = () => {
+        // FORZAR REPRODUCCIÓN AL TOCAR/DESLIZAR
+        const startEverything = () => {
             v.muted = false;
-            v.play();
+            v.play().catch(err => console.log("Reintentando..."));
             mBtn.innerText = "🔊";
-            ["click", "touchstart", "scroll"].forEach(e => window.removeEventListener(e, activarAudio));
+            ["click", "touchstart", "scroll"].forEach(e => window.removeEventListener(e, startEverything));
         };
-        window.addEventListener('click', activarAudio);
-        window.addEventListener('touchstart', activarAudio);
-        window.addEventListener('scroll', activarAudio);
+
+        window.addEventListener('click', startEverything);
+        window.addEventListener('touchstart', startEverything);
+        window.addEventListener('scroll', startEverything);
 
         function toggleMusic() {
             if (v.muted) { v.muted = false; v.play(); mBtn.innerText = "🔊"; } 
